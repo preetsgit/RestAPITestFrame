@@ -1,16 +1,27 @@
 using System.Collections.Generic;
 
-public class Employee
+namespace RestAPITest
 {
-    public string status{get;set;}
-    public List<Data> data{get;set;}
-}
+    public class Employee
+    {
+        public string status{get;set;}
+        public EmployeeData data{get;set;}
+        public string message{get;set;}
 
-public class Data
-{
-    public string id { get; set; } 
-    public string employee_name { get; set; } 
-    public string employee_salary { get; set; } 
-    public string employee_age { get; set; } 
-    public string profile_image { get; set; } 
+        public Employee()
+        {
+            status = string.Empty;
+            data = new EmployeeData();
+            message = string.Empty;
+        }
+    }
+
+    public class EmployeeData
+    {
+        public long id { get; set; } 
+        public string employee_name { get; set; } 
+        public long employee_salary { get; set; } 
+        public long employee_age { get; set; } 
+        public string profile_image { get; set; } 
+    }
 }
