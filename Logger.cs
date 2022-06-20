@@ -35,7 +35,7 @@ namespace RestAPITest
             patternLayout.ActivateOptions();
 
             RollingFileAppender roller = new RollingFileAppender();
-            roller.AppendToFile = false;
+            roller.AppendToFile = true;
             roller.File = ConstUtil.LogPath;
             roller.Layout = patternLayout;
             roller.MaxSizeRollBackups = ConstUtil.MaxSizeRollBackup;
